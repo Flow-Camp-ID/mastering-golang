@@ -1,4 +1,4 @@
-package studycase
+package utils
 
 import (
 	"fmt"
