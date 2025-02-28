@@ -1,0 +1,454 @@
+{
+	"info": {
+		"_postman_id": "2c606849-c4bf-48f7-84de-b8eb5bcf2155",
+		"name": "FlowCamp-Tugas-Api-Ajitirto",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28348693"
+	},
+	"item": [
+		{
+			"name": "AUTH",
+			"item": [
+				{
+					"name": "Admin Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"kenji\",\n  \"email\": \"kenji@example.com\",\n  \"password\": \"kenji123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Admin Register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"kenji\",\n  \"email\": \"kenji@example.com\",\n  \"password\": \"kenji123\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/admin/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 28 Feb 2025 04:10:53 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "104"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Admin\": {\n        \"id\": 11,\n        \"name\": \"kenji\",\n        \"email\": \"kenji@example.com\"\n    },\n    \"Message\": \"Admin registered successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Admin Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"kenji@example.com\",\n  \"password\": \"kenji123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Admin Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"kenji@example.com\",\n  \"password\": \"kenji123\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/admin/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 28 Feb 2025 04:11:38 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "188"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Message\": \"Login succesfully!\",\n    \"Token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDA4MDIyOTgsImlhdCI6MTc0MDcxNTg5OCwidXNlcl9pZCI6MTF9._yMUF4YkLsPWUqQLbhgJMwHLsodDCwMhM2EojSkRGN4\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "CRUD",
+			"item": [
+				{
+					"name": "Create Student",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john.doe@example.com\",\n  \"age\": 20,\n  \"major\": \"Computer Science\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/student",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"student"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Student",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john.doe@example.com\",\n  \"age\": 20,\n  \"major\": \"Computer Science\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/student",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"student"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 28 Feb 2025 04:29:26 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "147"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Message\": \"student created successfully\",\n    \"Student\": {\n        \"id\": 10,\n        \"name\": \"John Doe\",\n        \"email\": \"john.doe@example.com\",\n        \"age\": 20,\n        \"major\": \"Computer Science\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "List Student",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/student",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"student"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List Student",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/student",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"student"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 28 Feb 2025 06:27:14 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "955"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Students\": [\n        {\n            \"id\": 1,\n            \"name\": \"John Doe\",\n            \"email\": \"john.doe@example.com\",\n            \"age\": 20,\n            \"major\": \"Computer Science\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"John Doe\",\n            \"email\": \"john.doe@example.com\",\n            \"age\": 20,\n            \"major\": \"Computer Science\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"John Doe\",\n            \"email\": \"john.doe@example.com\",\n            \"age\": 20,\n            \"major\": \"Computer Science\"\n        },\n        {\n            \"id\": 4,\n            \"name\": \"John Doe\",\n            \"email\": \"john.doe@example.com\",\n            \"age\": 20,\n            \"major\": \"Computer Science\"\n        },\n        {\n            \"id\": 5,\n            \"name\": \"John Doe\",\n            \"email\": \"john.doe@example.com\",\n            \"age\": 20,\n            \"major\": \"Computer Science\"\n        },\n        {\n            \"id\": 6,\n            \"name\": \"John Doe\",\n            \"email\": \"john.doe@example.com\",\n            \"age\": 20,\n            \"major\": \"Computer Science\"\n        },\n        {\n            \"id\": 7,\n            \"name\": \"John Doe\",\n            \"email\": \"john.doe@example.com\",\n            \"age\": 20,\n            \"major\": \"Computer Science\"\n        },\n        {\n            \"id\": 8,\n            \"name\": \"John Doe\",\n            \"email\": \"john.doe@example.com\",\n            \"age\": 20,\n            \"major\": \"Computer Science\"\n        },\n        {\n            \"id\": 9,\n            \"name\": \"John Doe\",\n            \"email\": \"john.doe@example.com\",\n            \"age\": 20,\n            \"major\": \"Computer Science\"\n        },\n        {\n            \"id\": 10,\n            \"name\": \"John Doe\",\n            \"email\": \"john.doe@example.com\",\n            \"age\": 20,\n            \"major\": \"Computer Science\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Student",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"jones\",\n  \"email\": \"john.doe@example.com\",\n  \"age\": 22,\n  \"major\": \"Software Engineering\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/student/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"student",
+								"11"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Student",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"jones\",\n  \"email\": \"john.doe@example.com\",\n  \"age\": 22,\n  \"major\": \"Software Engineering\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/student/11",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"student",
+										"11"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 28 Feb 2025 06:43:22 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "147"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Message\": \"Student updated successfully\",\n    \"Student\": {\n        \"id\": 1,\n        \"name\": \"jones\",\n        \"email\": \"john.doe@example.com\",\n        \"age\": 22,\n        \"major\": \"Software Engineering\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Student",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/student/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"student",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Student",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/student/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"student",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 28 Feb 2025 07:14:00 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "42"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Message\": \"Student deleted successfully\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
