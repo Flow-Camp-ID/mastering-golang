@@ -35,7 +35,7 @@ func main() {
 
 	api := r.Group("/api") 
 	{
-		auth := api.Group("/auth")
+		auth := api.Group("/admin")
 		{
 			auth.POST("register", authController.Register)
 			auth.POST("login", authController.Login)

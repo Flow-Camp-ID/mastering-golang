@@ -703,7 +703,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\" : \"Rangga\",\r\n    \"email\" : \"rangga@gmail.com\",\r\n    \"password\" : \"rangga123\"\r\n}",
+					"raw": "{\r\n    \"name\" : \"dinda\",\r\n    \"email\" : \"dinda@gmail.com\",\r\n    \"password\" : \"dinda123\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -711,12 +711,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{base_url}}/auth/register",
+					"raw": "{{base_url}}/admin/register",
 					"host": [
 						"{{base_url}}"
 					],
 					"path": [
-						"auth",
+						"admin",
 						"register"
 					]
 				}
@@ -730,7 +730,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"email\" : \"rangga@gmail.com\",\r\n    \"password\" : \"rangga123\"\r\n}",
+					"raw": "{\r\n    \"email\" : \"dinda@gmail.com\",\r\n    \"password\" : \"dinda123\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -738,12 +738,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{base_url}}/auth/login",
+					"raw": "{{base_url}}/admin/login",
 					"host": [
 						"{{base_url}}"
 					],
 					"path": [
-						"auth",
+						"admin",
 						"login"
 					]
 				}
