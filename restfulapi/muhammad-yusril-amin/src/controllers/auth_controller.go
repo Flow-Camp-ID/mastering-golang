@@ -1,8 +1,8 @@
 package controllers
 
 import (
-	"restfull-api-lms/models"
-	"restfull-api-lms/utils"
+	"restfull-api-lms/src/models"
+	"restfull-api-lms/src/utils"
 
 	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"

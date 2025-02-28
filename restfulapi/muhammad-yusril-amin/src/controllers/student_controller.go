@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	"restfull-api-lms/models"
+	"restfull-api-lms/src/models"
 	"strconv"
 
 	"github.com/gin-gonic/gin"

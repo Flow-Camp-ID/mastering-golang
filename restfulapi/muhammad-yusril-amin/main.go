@@ -2,10 +2,10 @@ package main
 
 import (
 	"log"
-	"restfull-api-lms/config"
-	"restfull-api-lms/controllers"
-	"restfull-api-lms/middleware"
-	"restfull-api-lms/models"
+	"restfull-api-lms/src/config"
+	"restfull-api-lms/src/controllers"
+	"restfull-api-lms/src/middleware"
+	"restfull-api-lms/src/models"
 
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"

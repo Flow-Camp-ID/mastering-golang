@@ -1,7 +1,7 @@
 package middleware
 
 import (
-	"restfull-api-lms/utils"
+	"restfull-api-lms/src/utils"
 	"strings"
 
 	"github.com/gin-gonic/gin"

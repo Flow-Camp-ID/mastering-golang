@@ -1,7 +1,7 @@
 package utils
 
 import (
-	"restfull-api-lms/config"
+	"restfull-api-lms/src/config"
 	"time"
 
 	"github.com/golang-jwt/jwt/v5"

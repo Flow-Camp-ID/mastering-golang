@@ -53,7 +53,7 @@ API akan berjalan di `http://localhost:8000`
 Berikut adalah langkah-langkah untuk melakukan testing:
 
 - **Buka Postman.**
-- **Klik Import → Pilih file:** `docs/API LMS.postman_collection.json`
+- **Klik Import → Pilih file:** `src/docs/API LMS.postman_collection.json`
 - **Semua endpoint akan tersedia untuk testing.**
 
 ---
@@ -62,7 +62,7 @@ Berikut adalah langkah-langkah untuk melakukan testing:
 
 Berikut adalah desain database untuk proyek ini:
 
-![Database Design](docs/design_database.png)
+![Database Design](src/docs/design_database.png)
 
 ## 📌 Teknologi yang Digunakan
 
