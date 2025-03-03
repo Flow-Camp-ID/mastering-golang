@@ -1,0 +1,16 @@
+[GIN-debug] POST   /api/admin/register       --> github.com/ajitirto/restfulapi/src/controllers.(*AuthController).Register-fm (2 handlers)
+[GIN-debug] POST   /api/admin/login          --> github.com/ajitirto/restfulapi/src/controllers.(*AuthController).Login-fm (2 handlers)
+[GIN-debug] GET    /api/student              --> github.com/ajitirto/restfulapi/src/controllers.(*StudentController).GetStudents-fm (3 handlers)
+[GIN-debug] POST   /api/student              --> github.com/ajitirto/restfulapi/src/controllers.(*StudentController).CreateStudent-fm (3 handlers)
+[GIN-debug] PATCH  /api/student/:studentId   --> github.com/ajitirto/restfulapi/src/controllers.(*StudentController).UpdateStudent-fm (3 handlers)
+[GIN-debug] DELETE /api/student/:studentId   --> github.com/ajitirto/restfulapi/src/controllers.(*StudentController).DeleteStudent-fm (3 handlers)
+[GIN-debug] POST   /api/class                --> github.com/ajitirto/restfulapi/src/controllers.(*ClassController).CreateClass-fm (3 handlers)
+[GIN-debug] GET    /api/class                --> github.com/ajitirto/restfulapi/src/controllers.(*ClassController).GetClasses-fm (3 handlers)
+[GIN-debug] GET    /api/class/:classId       --> github.com/ajitirto/restfulapi/src/controllers.(*ClassController).DetailClass-fm (3 handlers)
+[GIN-debug] POST   /api/class/:classId/students --> github.com/ajitirto/restfulapi/src/controllers.(*ClassController).AddStudentToClass-fm (3 handlers)
+[GIN-debug] DELETE /api/class/:classId/students --> github.com/ajitirto/restfulapi/src/controllers.(*ClassController).RemoveStudentFromClass-fm (3 handlers)
+[GIN-debug] PUT    /api/class/:classId       --> github.com/ajitirto/restfulapi/src/controllers.(*ClassController).UpdateClass-fm (3 handlers)
+[GIN-debug] DELETE /api/class/:classId       --> github.com/ajitirto/restfulapi/src/controllers.(*ClassController).DeleteClass-fm (3 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :8080
