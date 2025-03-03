@@ -9,4 +9,5 @@ type Student struct {
 	Email *string `json:"email"`
 	Age   *int    `json:"age"`
 	Major *string `json:"major"`
+	Classes []Class `json:"classes" gorm:"many2many:student_class"`
 }

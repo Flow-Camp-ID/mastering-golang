@@ -7,5 +7,5 @@ import (
 
 func DropTable() {
 	db := config.ConnectMysql()
-	db.Migrator().DropTable(&models.Admin{}, &models.Class{}, &models.Student{}, &models.StudentClass{})
+	db.Migrator().DropTable(&models.Admin{}, &models.Class{}, &models.Student{})
 }

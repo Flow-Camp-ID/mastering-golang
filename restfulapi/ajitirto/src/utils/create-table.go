@@ -7,5 +7,5 @@ import (
 
 func ConnectToMysql() {
 	db := config.ConnectMysql()
-	db.AutoMigrate(&models.Admin{}, &models.Class{}, &models.Student{}, &models.StudentClass{})
+	db.AutoMigrate(&models.Admin{}, &models.Class{}, &models.Student{})
 }

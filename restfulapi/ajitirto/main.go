@@ -7,11 +7,10 @@ import (
 	"os"
 	"time"
 
-
 	"github.com/ajitirto/restfulapi/src/config"
 	"github.com/ajitirto/restfulapi/src/controllers"
+	"github.com/ajitirto/restfulapi/src/middleware"
 	"github.com/ajitirto/restfulapi/src/utils"
-	// "github.com/ajitirto/restfulapi/src/models"
 
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
@@ -66,6 +65,7 @@ func main() {
 
 	authController := controllers.NewAuthController(config.ConnectMysql())
 	studentController := controllers.NewStudentController(config.ConnectMysql())
+	classController := controllers.NewClassController(config.ConnectMysql())
 
 	api := router.Group("/api")
 	{
@@ -76,6 +76,7 @@ func main() {
 		}
 
 		student := api.Group("/student")
+		student.Use(middleware.AuthMiddleware())
 		{
 			student.GET("", studentController.GetStudents)
 			student.POST("", studentController.CreateStudent)
@@ -84,49 +85,15 @@ func main() {
 		}
 
 		class := api.Group("/class")
+		class.Use(middleware.AuthMiddleware())
 		{
-			class.POST("", func(c *gin.Context) {
-				c.JSON(200, gin.H{
-					"message": "pong",
-				})
-			})
-
-			class.GET("", func(c *gin.Context) {
-				c.JSON(200, gin.H{
-					"message": "pong",
-				})
-			})
-
-			class.GET("/:classId", func(c *gin.Context) {
-				c.JSON(200, gin.H{
-					"message": "pong",
-				})
-			})
-
-			class.POST("/:classId/students", func(c *gin.Context) {
-				c.JSON(200, gin.H{
-					"message": "pong",
-				})
-			})
-
-			class.DELETE("/:classId/students", func(c *gin.Context) {
-				c.JSON(200, gin.H{
-					"message": "pong",
-				})
-			})
-
-			class.PUT("/:classId", func(c *gin.Context) {
-				c.JSON(200, gin.H{
-					"message": "pong",
-				})
-			})
-
-			class.DELETE("/:classId", func(c *gin.Context) {
-				c.JSON(200, gin.H{
-					"message": "pong",
-				})
-			})
-				
+			class.POST("", classController.CreateClass)
+			class.GET("", classController.GetClasses)
+			class.GET("/:classId", classController.DetailClass)
+			class.POST("/:classId/students", classController.AddStudentToClass)
+			class.DELETE("/:classId/students", classController.RemoveStudentFromClass)
+			class.PUT("/:classId", classController.UpdateClass)
+			class.DELETE("/:classId", classController.DeleteClass)
 		}
 	}
 
